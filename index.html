@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Multi Step Form</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <header>Signup Form</header>
+<!-- progress bar -->
+         <div class="progress-bar">
+            <div class="step">
+               <p>
+                  Name
+               </p>
+               <div class="bullet">
+                  <span>1</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Contact
+               </p>
+               <div class="bullet">
+                  <span>2</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Birth
+               </p>
+               <div class="bullet">
+                  <span>3</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Submit
+               </p>
+               <div class="bullet">
+                  <span>4</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+         </div>
+
+<!-- Forms -->
+         <div class="form-outer">
+            <form action="#">
+<!-- First form -->
+               <div class="page slide-page">
+                  <div class="title">
+                     Basic Info:
+                  </div>
+                  <div class="field">
+                    <label class="label" for="firstname">First Name<abbr title="required" aria-label="required">*</abbr></label>
+                    <input id="firstname" type="text" name="firstname" minlength="2" required>
+                 </div>
+                  <div class="field">
+                    <label class="label" for="lastname">Last Name<abbr title="required" aria-label="required">*</abbr></label>
+                    <input id="lastname" type="text" name="lastname" minlength="2" required>
+                  </div>
+                  <div class="field">
+                     <button id="firstNext" class="next" disabled>Next</button>
+                  </div>
+               </div>
+
+<!-- 2 form -->
+               <div class="page">
+                  <div class="title">
+                     Contact Info:
+                  </div>
+                  <div class="field">
+                    <label class="label" for="email">Email Address<abbr title="required" aria-label="required">*</abbr></label>
+                    <input id="email" type="email" name="email" required>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="phonenumber">Phone number<abbr title="required" aria-label="required">*</abbr></label>
+                    <input id="phonenumber" type="tel" name="phonenumber" placeholder="+37012345678" required>
+                  </div>
+                  <div class="title">
+                     Prefered contact method:
+                  </div>
+                  <div id="radioSellection" class="field">
+                    <input type="radio" id="contactChoice1" name="contact" value="Email" checked>
+                    <label for="contactChoice1">Email</label>
+                    <input type="radio" id="contactChoice2" name="contact" value="Phone">
+                    <label for="contactChoice2">Phone</label>
+                  </div>
+
+                  <div class="field btns">
+                     <button id="prev-1" class="prev">Previous</button>
+                     <button id="next-1" class="next" disabled>Next</button>
+                  </div>
+               </div>
+<!-- 3 form -->
+               <div class="page">
+                  <div class="title">
+                     Date of Birth:
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Date
+                     </div>
+                     <input type="date" id="birthday" name="birthday">
+
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Gender
+                     </div>
+                     <select id="gender" name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                     </select>
+                  </div>
+                  <div class="field btns">
+                     <button id="prev-2" class="prev">Previous</button>
+                     <button id="next-2" class="next">Next</button>
+                  </div>
+               </div>
+
+<!-- summary + submit -->
+               <div class="page">
+                  <div class="title">
+                     Summary:
+                  </div>
+                  <div id="summary" class="label">
+
+                  </div>
+                  <div class="field">
+                  <div class="label">
+                    <input type="checkbox" id="consent" name="consent" value=unchecked>
+                    <label for="consent">I consent that information above is correct</label>
+                  </div>
+                  <div class="field btns">
+                     <button id="prev-3" class="prev">Previous</button>
+                     <button id="submit" class="submit" disabled="disabled">Submit</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
