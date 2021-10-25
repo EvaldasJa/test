@@ -28,7 +28,7 @@ const summary = document.querySelector("#summary");
 const checkConsent = document.querySelector("#consent");
 
 // Check input validity and Enable Next button
-firstName.addEventListener("keyup", event => {
+document.addEventListener("keyup", event => {
   if (firstName.validity.valid && lastName.validity.valid) {
     nextBtnFirst.removeAttribute("disabled");
   } else {
@@ -50,7 +50,7 @@ nextBtnFirst.addEventListener("click", function(event){
 });
 
 // Check input validity and Enable Next button
-email.addEventListener("keyup", event => {
+document.addEventListener("keyup", event => {
   if (email.validity.valid && phoneNumber.validity.valid) {
     nextBtnSec.removeAttribute("disabled");
   } else {
